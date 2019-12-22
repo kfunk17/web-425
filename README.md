@@ -1,2 +1,4 @@
 # web-425
-Angular Course
+Repository for Angular Course
+
+#contributors Professor Mohamed Eltayeb Mo - Bellevue University Karie Funk - Bellevue University
