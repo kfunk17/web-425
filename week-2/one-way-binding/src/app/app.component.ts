@@ -1,3 +1,10 @@
+/*
+ *  Title:  app.component.ts
+ *  Author: Karie Funk
+ *  Date:   11 January 2020
+ *  Description: Exercise 2.2
+ */
+
 import { Component } from '@angular/core';
 import { ArgumentOutOfRangeError } from 'rxjs';
 
