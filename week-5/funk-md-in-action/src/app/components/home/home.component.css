@@ -1,0 +1,15 @@
+.frm-login { width: 100%; border-radius: 10px; }
+.frm-login-panel { border: 1px solid black; }
+.frm-login-header { background-color: black; }
+.frm-login-toolbar { background-color: white;;  color: black; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+.frm-login-body { display: flex; flex-direction: column; margin-top: 15px; }
+.btn-login { background-color: lightcoral; color: white; }
+.btn-cancel { background-color: lightcoral; color: white; }
+.btn-login:hover { background-color: gray; color: white; }
+.btn-cancel:hover { background-color: gray; color: white; }
+.frm-login-actions { text-align: right; }
+/* Global */
+.wrapper { width: 100%; margin-top: 10%; }
+h2{font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+p{color: white; padding:15px; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+.column{background-color: gray; margin-top:70px; border-radius:3px;}

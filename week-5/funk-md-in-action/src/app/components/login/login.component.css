@@ -1,0 +1,21 @@
+/* Form Styles */
+.mat-toolbar {
+    background: #f5f5f5;
+}
+
+.login-panel {
+    margin-top: 25px
+}
+
+.frm-login-body {
+    margin-top: 15px;
+}
+
+.frm-login-actions {
+    text-align: right;
+}
+
+.mat-form-field {
+	margin-right: 1.5rem;
+	width: 100%
+}
