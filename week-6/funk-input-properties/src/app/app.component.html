@@ -1,0 +1,15 @@
+<app-nav></app-nav>
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="4%" fxLayoutAlign="center" id="stock">
+	<div fxFlex="20%" class="column">
+		<h2>More Info</h2>
+		<app-sidenav></app-sidenav>
+	</div>
+	<div class="main" fxFlex="75%">
+		<h2>Stock</h2>
+		<input type="text" placeholder="Enter stock (e.g. AAPL)" (change)="onChangeEvent($event)">
+		<app-order [stockSymbol]="stock" [quantity]="numberOfShares"></app-order>
+	</div>
+</div>
+
+<router-outlet></router-outlet>
