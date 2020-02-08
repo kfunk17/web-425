@@ -1,0 +1,28 @@
+.column{
+    background-color: #83A603;
+    height: 500px;
+    color: white;
+   
+
+}
+
+.container{
+    background-color: #BF3F3F;
+    color: white;
+  
+    
+}
+
+.main h2{
+    margin-left: 100px;
+}
+
+h2{
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
+div {
+    font-family: sans-serif;
+    
+}
