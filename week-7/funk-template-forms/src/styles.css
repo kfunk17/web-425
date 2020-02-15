@@ -1,0 +1,10 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.container {
+    margin-top: 50px;
+  
+}
+
+.submit-btn {
+	text-align: right;
+}

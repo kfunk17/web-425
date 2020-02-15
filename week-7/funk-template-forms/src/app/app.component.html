@@ -1,0 +1,58 @@
+<!--
+	Name: Karie Funk
+	Date: 02/15/2020
+	Assignment: 7.2 Template Driven Form
+-->
+<app-nav></app-nav>
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="3%" fxLayoutAlign="center">
+	<div fxFlex="25%" class="column">
+		<app-sidenav></app-sidenav>
+	</div>
+	<div fxFlex="75%">
+
+<div class="form-example">
+		<mat-card>
+			<mat-card-header>
+				<mat-card-title>Login</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+					<div>
+						<mat-form-field>
+							<mat-label>Username:</mat-label>
+							<input matInput type="text" name="username" ngModel>
+						</mat-form-field>
+					</div>
+					<div>
+						<mat-form-field>
+							<mat-label>SSN:</mat-label>
+							<input matInput type="text" name="ssn" ngModel>
+						</mat-form-field>
+					</div>
+					<div ngModelGroup="passwordsGroup">
+						<div>
+							<mat-form-field>
+								<mat-label>Password:</mat-label>
+								<input matInput type="text" type="password" name="password" ngModel>
+							</mat-form-field>
+						</div>
+						<div>
+							<mat-form-field>
+								<mat-label>Confirm Password:</mat-label>
+								<input matInput type="text" type="password" name="pconfirm" ngModel>
+							</mat-form-field>
+						</div>
+					</div>
+
+					<div class="submit-btn">
+						<button mat-raised-button color="warn" type="submit">Submit</button>
+					</div>
+				</form>
+			</mat-card-content>
+		</mat-card>
+		</div>
+	</div>
+</div>
+
+<router-outlet></router-outlet>
