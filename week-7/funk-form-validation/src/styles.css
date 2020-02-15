@@ -1,0 +1,13 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.container {
+    margin-top: 80px;
+}
+
+.error {
+    color: red;
+}
+
+.hasError {
+    color: 1px solid red;
+}
