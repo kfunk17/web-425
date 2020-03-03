@@ -1,0 +1,42 @@
+<div *ngIf="ordersService.getStatus()">
+  <mat-card class="orderCardSubmitted">
+    <p class="submittedHeader">Awaiting Employee Approval/Response</p>
+    <mat-card-content fxLayout="row" class="orderBodySubmitted">
+      <div class="left" fxFlex="40%">
+        <p class="orderReview">Order Review:</p>
+        <div class="selectedProducts" *ngFor="let item of selectedProducts">{{item.text}}</div>
+        <span class="subtotal">Subtotal (before custom work): ${{subtotal}}</span>
+        <mat-form-field class="customInput">
+          <textarea readonly class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Custom Work / Other"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="right" fxFlex="60%">
+        <div class="container">
+          <mat-form-field class="customInputResp">
+            <textarea class="txtAreaResp" [(ngModel)]="responseTxt" matInput placeholder="Response to Customer / Other Details"></textarea>
+          </mat-form-field>
+          <mat-form-field class="labor">
+              <input (change)="getTotal()" (keyup)="getTotal()" type="number" [(ngModel)]="labor" matInput placeholder="Labor (hours)">
+          </mat-form-field>
+          <mat-form-field class="parts">
+              <input (change)="getTotal()" (keyup)="getTotal()" type="number" [(ngModel)]="parts" matInput placeholder="Parts ($)">
+          </mat-form-field>
+          <p>Custom Work Total:  ${{customTotal}}</p>
+          <p>Final Quote: ${{grandTotal}}</p> 
+        </div>
+
+      </div>
+      
+      
+
+    </mat-card-content>
+    <mat-card-actions class="orderButtons">
+        <button class="reject" mat-raised-button (click)="reject()">Reject</button>
+        <button class="accept" mat-raised-button (click)="submit()">Accept</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
+<h4 *ngIf="!ordersService.getStatus() && !switchService.getCustomerView()" class="noOrders">No Pending Work Orders At This Time</h4>
+<h4 *ngIf="switchService.getCustomerView()" class="noOrders">You Do Not have the Required Privileges to View this Page</h4>

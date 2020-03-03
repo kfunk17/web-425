@@ -1,0 +1,112 @@
+.orderCard {
+  width: 60%;
+  margin: auto;
+  top: 30px;
+  height: 600px;
+}
+mat-card-content {
+  margin-left: 40px;
+}
+.orderHeaderTitle {
+  font-size: 35px;
+  font-family: tahoma;
+}
+.check {
+  padding: 5px;
+}
+.customInput {
+  margin-top: 30px;
+  width: 60%;
+}
+.orderButtons {
+  text-align: right;
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+
+}
+.txtArea {
+  height: 115px !important;
+}
+.subtotal {
+  display: block;
+  margin-top: 25px;
+  font-family: tahoma;
+}
+.statusBoxAccepted {
+  background-color: red;
+  width: 70%;
+  padding: 12px 8px 8px 8px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.statusTxt {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+.statusBox {
+  background-color: rgba(255, 202, 7, 0.55);
+  width: 46%;
+  padding: 12px 8px 8px 8px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.statusTxtAccepted {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+.orderHeaderTitleSubmitted {
+  font-size: 25px;
+  font-family: tahoma;
+}
+.selectedProducts {
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.623);
+  width: 40%;
+  border-bottom: 1px solid gray;
+  font-family: tahoma;
+}
+.orderCardSubmitted {
+  width: 60%;
+  margin: auto;
+  top: 30px;
+  padding-bottom: 40px;
+}
+.orderBodySubmitted {
+  margin-top: 20px;
+}
+.submittedHeader {
+  position: relative;
+  margin: auto;
+  font-size: 25px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 20px 0 20px 0;
+  background-color: #9e9e9e;
+  color: white;
+  text-align: center;
+}
+.orderReview {
+  font-family: tahoma;
+  font-size: 18px;
+}
+.reject {
+  background-color: #f44336;
+  color: white;
+}
+.accept {
+  background-color: #28a745;
+  color: white;
+}
+.indent {
+  margin-left: 15px;
+}
+.orderCardAccepted {
+  width: 60%;
+  margin: auto;
+  top: 30px;
+  padding-bottom: 50px;
+  margin-bottom: 80px;
+}

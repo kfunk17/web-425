@@ -1,0 +1,35 @@
+<div>
+  <mat-card class="orderCardAccepted">
+    <p class="submittedHeader">Order Agreement</p>
+    <mat-card-content class="orderBodySubmitted">
+
+      <mat-form-field class="customInput">
+        <textarea readonly class="txtArea" [(ngModel)]="passover.customOrder" matInput placeholder="Description"></textarea>
+      </mat-form-field>
+
+
+      <mat-form-field class="customInput">
+        <textarea readonly class="txtArea" [(ngModel)]="passover.responseTxt" matInput placeholder="Employee Response"></textarea>
+      </mat-form-field>
+      <div class="secondRowContainer" fxLayout="row">
+        <div class="selectedContainer" fxFlex="50%">
+          <div class="selectedProducts" *ngFor="let item of passover.selectedProducts">{{item.text}}</div>
+        </div>
+        <div class="totalsContainer" fxFlex="50%">
+          <span class="subtotal">Subtotal (before custom work): ${{passover.subtotal}}</span>
+          <span class="subtotal indent">Labor: ${{passover.labor}}</span>
+          <span class="subtotal indent">Parts: ${{passover.parts}}</span>
+          <span class="subtotal">Custom Work: ${{passover.customTotal}}</span>
+          <span class="subtotal">Total: ${{passover.grandTotal}}</span>
+        </div>
+      </div>
+    </mat-card-content>
+    <div class="date">
+      {{date}}
+    </div>
+    <mat-card-actions class="orderButtons">
+      <button color="primary" mat-raised-button (click)="print()">Print</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

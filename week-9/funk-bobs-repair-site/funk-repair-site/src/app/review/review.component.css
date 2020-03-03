@@ -1,0 +1,101 @@
+mat-card-content {
+  margin-left: 15px;
+}
+
+.orderHeaderTitle {
+  font-size: 35px;
+  font-family: "Chau Philomene One", sans-serif;
+}
+.orderButtons {
+  text-align: right;
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+}
+.check {
+  padding: 5px;
+}
+.customInput {
+  margin-top: 30px;
+  width: 50%;
+  display: inline-block;
+}
+.txtArea {
+  height: 115px !important;
+  display: inline-block;
+}
+.subtotal {
+  display: block;
+  margin-top: 25px;
+  font-family: "Ubuntu Mono", monospace;
+}
+.statusBox {
+  background-color: rgba(255, 202, 7, 0.55);
+  width: 46%;
+  padding: 12px 8px 8px 8px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.orderHeaderTitleSubmitted {
+  font-size: 25px;
+  font-family: "Ubuntu Mono", monospace;
+}
+.selectedProducts {
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.623);
+  width: 80%;
+  border-bottom: 1px solid gray;
+  font-family: "Ubuntu Mono", monospace;
+  margin-left: 25px;
+}
+
+.orderBodySubmitted {
+  margin-top: 20px;
+}
+.submittedHeader {
+  position: relative;
+  margin: auto;
+  font-size: 25px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 20px 0 20px 0;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+}
+.orderReview {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 18px;
+}
+.reject {
+  background-color: #dc3545;
+  color: white;
+}
+.accept {
+  background-color: #28a745;
+  color: white;
+}
+.indent {
+  margin-left: 15px;
+}
+.orderCardAccepted {
+  width: 60%;
+  margin: auto;
+  top: 30px;
+  height: 650px;
+  padding: 0px;
+  margin-bottom: 80px;
+}
+.totalsContainer,
+.selectedContainer {
+  display: inline-block;
+}
+.secondRowContainer {
+  width: 100%;
+}
+.date {
+  text-align: left;
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+}

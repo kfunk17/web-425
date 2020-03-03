@@ -1,0 +1,105 @@
+mat-card-content {
+  margin-left: 40px;
+}
+.left {
+  border-right: 1px dashed lightgray;
+  display: inline-block;
+}
+.right {
+  display: inline-block;
+}
+.subtotal {
+  display: block;
+  margin-top: 25px;
+  font-family: tahoma;
+}
+
+.orderHeaderTitleSubmitted {
+  font-size: 25px;
+  font-family: tahoma;
+}
+.selectedProducts {
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.623);
+  width: 60%;
+  border-bottom: 1px solid gray;
+  font-family: tahoma;
+}
+.orderBodySubmitted {
+  margin-top: 20px;
+}
+.orderCardSubmitted {
+  width: 90%;
+  margin: auto;
+  top: 30px;
+  height: 800px;
+  padding: 0px;
+}
+.orderReview {
+  font-family: tahoma;
+  font-size: 18px;
+}
+.txtArea {
+  height: 115px !important;
+}
+.customInput {
+  margin-top: 30px;
+  width: 60%;
+}
+.txtAreaResp {
+  height: 115px !important;
+  width: 100% !important;
+}
+.customInputResp {
+  margin-top: 30px;
+  width: 100%;
+}
+.labor {
+  margin-top: 30px;
+  width: 20%;
+  display: inline-block;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.submittedHeader {
+  position: relative;
+  margin: auto;
+  font-size: 25px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 20px 0 20px 0;
+  background-color: #9e9e9e;
+  color: white;
+  text-align: center;
+}
+.parts {
+  display: inline-block;
+  width: 20%;
+  margin-left: 35px;
+}
+.orderButtons {
+  text-align: right;
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+}
+.reject {
+  background-color: #f44336;
+  color: white;
+}
+.accept {
+  background-color: #28a745;
+  color: white;
+}
+.noOrders {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  font-family: tahoma;
+  font-size: 35px;
+  color: lightgray;
+  border-bottom: 4px solid lightgray;
+}

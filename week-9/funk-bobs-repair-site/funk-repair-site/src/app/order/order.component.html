@@ -1,0 +1,74 @@
+<div *ngIf="!ordersService.getStatus() && !ordersService.getEmployeeApproved()" class="orderForm">
+  <mat-card class="orderCard">
+    <mat-card-header class="orderHeader">
+      <h3 color="accent" class="orderHeaderTitle">Order Form</h3>
+    </mat-card-header>
+    <mat-card-content class="orderBody">
+      <div class="check" *ngFor="let item of stock">
+        <mat-checkbox color="warn" [(ngModel)]="item.inCart" (change)="sum()">{{item.text}}</mat-checkbox>
+      </div>
+      <mat-form-field class="customInput">
+        <textarea class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Custom Work / Other"></textarea>
+      </mat-form-field>
+      <span class="subtotal">Subtotal (before custom work): ${{subtotal}}</span>
+    </mat-card-content>
+    <mat-card-actions class="orderButtons">
+      <button mat-raised-button (click)="clear()">Clear</button>
+      <button color="warn" mat-raised-button (click)="submit()">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div *ngIf="ordersService.getStatus()">
+  <mat-card class="orderCardSubmitted">
+    <p color="accent" class="submittedHeader">Order Submitted</p>
+    <mat-card-content class="orderBodySubmitted">
+      <div class="statusBox">
+        <mat-icon>info</mat-icon>
+        <span class="statusTxt">Order has been submitted and an employee will soon review.</span>
+      </div>
+      <p class="orderReview">Order Review:</p>
+      <div class="selectedProducts" *ngFor="let item of selectedProducts">{{item.text}}</div>
+      <span class="subtotal">Subtotal (before custom work): ${{subtotal}}</span>
+      <mat-form-field class="customInput">
+        <textarea readonly class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Custom Work / Other"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions class="orderButtons">
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+<div *ngIf="ordersService.getEmployeeApproved()">
+  <mat-card class="orderCardAccepted">
+    <p color="accent" class="submittedHeader">Order Approved By Employee</p>
+    <mat-card-content class="orderBodySubmitted">
+      <div class="statusBoxAccepted">
+        <mat-icon>info</mat-icon>
+        <span class="statusTxtAccepted">Order has been Approved, please review the quote and Accept or Decline it.</span>
+      </div>
+      <p class="orderReview">Order Review:</p>
+
+      <mat-form-field class="customInput">
+        <textarea readonly class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Your Custom Work Description / Other"></textarea>
+      </mat-form-field>
+
+
+      <mat-form-field class="customInput">
+        <textarea readonly class="txtArea" [(ngModel)]="ordersService.responseTxt" matInput placeholder="Employee Response to Customer / Other Details"></textarea>
+      </mat-form-field>
+
+      <div class="selectedProducts" *ngFor="let item of selectedProducts">{{item.text}}</div>
+      <span class="subtotal">Subtotal (before custom work): ${{subtotal}}</span>
+      <span class="subtotal indent">Labor: ${{ordersService.labor}}</span>
+      <span class="subtotal indent">Parts: ${{ordersService.parts}}</span>
+      <span class="subtotal">Custom Work Total: ${{ordersService.customTotal}}</span>
+      <span class="subtotal">Grand Total: ${{ordersService.grandTotal}}</span>
+
+    </mat-card-content>
+    <mat-card-actions class="orderButtons">
+      <button class="reject" mat-raised-button (click)="reject()">Decline</button>
+      <button class="accept" mat-raised-button (click)="accept()">Accept</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
