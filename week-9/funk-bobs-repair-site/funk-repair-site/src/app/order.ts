@@ -1,6 +1,4 @@
-/**
- * Basic class for the order object.
- */
+
 export class Order{
     selectedProducts: Array<object> = [];
     customWork: string;
