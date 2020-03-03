@@ -7,7 +7,7 @@
         <div class="selectedProducts" *ngFor="let item of selectedProducts">{{item.text}}</div>
         <span class="subtotal">Subtotal (before custom work): ${{subtotal}}</span>
         <mat-form-field class="customInput">
-          <textarea readonly class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Custom Work / Other"></textarea>
+          <textarea readonly class="txtArea" [(ngModel)]="customOrder" matInput placeholder="Customer Information and Phone Number"></textarea>
         </mat-form-field>
       </div>
       <div class="right" fxFlex="60%">
@@ -38,5 +38,5 @@
   </mat-card>
 
 </div>
-<h4 *ngIf="!ordersService.getStatus() && !switchService.getCustomerView()" class="noOrders">No Pending Work Orders At This Time</h4>
-<h4 *ngIf="switchService.getCustomerView()" class="noOrders">You Do Not have the Required Privileges to View this Page</h4>
+<h4 *ngIf="!ordersService.getStatus() && !switchService.getCustomerView()" class="noOrders">You currently have no orders at this time.</h4>
+<h4 *ngIf="switchService.getCustomerView()" class="noOrders">Click submit order to start order.</h4>
